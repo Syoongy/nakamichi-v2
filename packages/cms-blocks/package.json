@@ -1,0 +1,22 @@
+{
+  "name": "cms-blocks",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "dev:prepare": "nuxt prepare",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "shadcn-layer": "workspace:*",
+    "lucide-vue-next": "catalog:"
+  },
+  "devDependencies": {
+    "nuxt": "catalog:",
+    "vue": "catalog:",
+    "lucide-vue-next": "catalog:",
+    "typescript": "catalog:"
+  }
+}
