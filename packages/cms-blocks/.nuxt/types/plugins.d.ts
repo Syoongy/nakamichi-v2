@@ -6,14 +6,14 @@ type Decorate<T extends Record<string, any>> = { [K in keyof T as K extends stri
 type InjectionType<A extends Plugin> = A extends {default: Plugin<infer T>} ? Decorate<T> : unknown
 
 type NuxtAppInjections = 
-  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/app/plugins/revive-payload.client.js")> &
-  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/head/runtime/plugins/unhead.js")> &
-  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/app/plugins/router.js")> &
-  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/app/plugins/payload.client.js")> &
-  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/app/plugins/navigation-repaint.client.js")> &
-  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/app/plugins/check-outdated-build.client.js")> &
-  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/app/plugins/revive-payload.server.js")> &
-  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/app/plugins/chunk-reload.client.js")>
+  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/app/plugins/revive-payload.client.js")> &
+  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/head/runtime/plugins/unhead.js")> &
+  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/app/plugins/router.js")> &
+  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/app/plugins/payload.client.js")> &
+  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/app/plugins/navigation-repaint.client.js")> &
+  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/app/plugins/check-outdated-build.client.js")> &
+  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/app/plugins/revive-payload.server.js")> &
+  InjectionType<typeof import("../../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/app/plugins/chunk-reload.client.js")>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }

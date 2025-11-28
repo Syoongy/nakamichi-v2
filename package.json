@@ -28,9 +28,9 @@
       "vue": "^3.5.25",
       "nuxt": "^4.2.1",
       "lucide-vue-next": "^0.555.0"
-    },
-    "overrides": {
-      "vite": "npm:rolldown-vite@latest"
     }
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@latest"
   }
 }

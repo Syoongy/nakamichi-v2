@@ -30,13 +30,13 @@
         "../*"
       ],
       "nitropack/types": [
-        "../../../node_modules/.bun/nitropack@2.12.9+d2ef6951f7184bb0/node_modules/nitropack/types"
+        "../../../node_modules/.bun/nitropack@2.12.9+b88208a23e7f684e/node_modules/nitropack/types"
       ],
       "nitropack/runtime": [
-        "../../../node_modules/.bun/nitropack@2.12.9+d2ef6951f7184bb0/node_modules/nitropack/runtime"
+        "../../../node_modules/.bun/nitropack@2.12.9+b88208a23e7f684e/node_modules/nitropack/runtime"
       ],
       "nitropack": [
-        "../../../node_modules/.bun/nitropack@2.12.9+d2ef6951f7184bb0/node_modules/nitropack"
+        "../../../node_modules/.bun/nitropack@2.12.9+b88208a23e7f684e/node_modules/nitropack"
       ],
       "defu": [
         "../../../node_modules/.bun/defu@6.1.4/node_modules/defu"
@@ -54,7 +54,7 @@
         "../../../node_modules/.bun/@unhead+vue@2.0.19+f899f459d7ee6a31/node_modules/@unhead/vue"
       ],
       "@nuxt/devtools": [
-        "../../../node_modules/.bun/@nuxt+devtools@3.1.1+dbbe828ee74468b9/node_modules/@nuxt/devtools"
+        "../../../node_modules/.bun/@nuxt+devtools@3.1.1+eea9e60519fc0c1a/node_modules/@nuxt/devtools"
       ],
       "@vue/runtime-core": [
         "../../../node_modules/.bun/@vue+runtime-core@3.5.25/node_modules/@vue/runtime-core"
@@ -75,10 +75,10 @@
         "../../../node_modules/.bun/@nuxt+schema@4.2.1/node_modules/@nuxt/schema"
       ],
       "nuxt": [
-        "../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt"
+        "../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt"
       ],
       "vite/client": [
-        "../../../node_modules/.bun/vite@7.2.4+f88c057c09eb9dc9/node_modules/vite/client"
+        "../../../node_modules/.bun/rolldown-vite@7.2.8+302d228850bc09cf/node_modules/rolldown-vite/client"
       ],
       "#shared": [
         "../shared"
@@ -93,10 +93,10 @@
         "./*"
       ],
       "#internal/nuxt/paths": [
-        "../../../node_modules/.bun/@nuxt+nitro-server@4.2.1+5cf56f2bda2a068e/node_modules/@nuxt/nitro-server/dist/runtime/utils/paths"
+        "../../../node_modules/.bun/@nuxt+nitro-server@4.2.1+ea6b1c3953081e26/node_modules/@nuxt/nitro-server/dist/runtime/utils/paths"
       ],
       "#unhead/composables": [
-        "../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/dist/head/runtime/composables"
+        "../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/dist/head/runtime/composables"
       ]
     },
     "lib": [
@@ -109,8 +109,8 @@
     "./types/nitro-nuxt.d.ts",
     "../../../node_modules/.bun/shadcn-nuxt@2.3.3+8784083427f26726/node_modules/runtime/server",
     "../../../node_modules/.bun/shadcn-nuxt@2.3.3+8784083427f26726/node_modules/dist/runtime/server",
-    "../../../node_modules/.bun/@nuxt+devtools@3.1.1+dbbe828ee74468b9/node_modules/runtime/server",
-    "../../../node_modules/.bun/@nuxt+devtools@3.1.1+dbbe828ee74468b9/node_modules/dist/runtime/server",
+    "../../../node_modules/.bun/@nuxt+devtools@3.1.1+eea9e60519fc0c1a/node_modules/runtime/server",
+    "../../../node_modules/.bun/@nuxt+devtools@3.1.1+eea9e60519fc0c1a/node_modules/dist/runtime/server",
     "../../../node_modules/.bun/@nuxt+telemetry@2.6.6+8784083427f26726/node_modules/runtime/server",
     "../../../node_modules/.bun/@nuxt+telemetry@2.6.6+8784083427f26726/node_modules/dist/runtime/server",
     "../shared/**/*.d.ts",
@@ -121,10 +121,10 @@
   "exclude": [
     "../node_modules",
     "../../../node_modules",
-    "../../../node_modules/.bun/nuxt@4.2.1+5cce1919178aa9e9/node_modules/nuxt/node_modules",
+    "../../../node_modules/.bun/nuxt@4.2.1+7833263c30173e6b/node_modules/nuxt/node_modules",
     "../../shadcn-layer/node_modules",
     "../../../node_modules/.bun/shadcn-nuxt@2.3.3+8784083427f26726/node_modules/shadcn-nuxt/node_modules",
-    "../../../node_modules/.bun/@nuxt+devtools@3.1.1+dbbe828ee74468b9/node_modules/@nuxt/devtools/node_modules",
+    "../../../node_modules/.bun/@nuxt+devtools@3.1.1+eea9e60519fc0c1a/node_modules/@nuxt/devtools/node_modules",
     "../../../node_modules/.bun/@nuxt+telemetry@2.6.6+8784083427f26726/node_modules/@nuxt/telemetry/node_modules",
     "../dist"
   ]
