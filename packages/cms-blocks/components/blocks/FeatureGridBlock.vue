@@ -12,7 +12,9 @@ defineProps<Props>()
 <template>
     <section class="bg-neutral-950 text-white py-20">
         <div class="container mx-auto px-4 text-center">
-            <h2 v-if="title" class="text-3xl md:text-4xl font-bold mb-16 uppercase tracking-widest">{{ title }}</h2>
+            <h2 v-if="title" class="text-4xl md:text-5xl mb-16 uppercase font-black font-display tracking-tight">
+                {{ title }}
+            </h2>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div v-for="(feature, index) in features" :key="index" class="flex flex-col items-center">

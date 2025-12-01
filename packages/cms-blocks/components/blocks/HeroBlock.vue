@@ -21,9 +21,14 @@ defineProps<Props>()
         </div>
 
         <div class="container relative z-10 mx-auto px-4">
-            <div :class="['max-w-3xl', layout === 'center' ? 'mx-auto text-center' : '']">
-                <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">{{ headline }}</h1>
-                <p v-if="subheadline" class="text-xl md:text-2xl text-gray-200 mb-8">{{ subheadline }}</p>
+            <div :class="['max-w-3xl space-y-9', layout === 'center' ? 'mx-auto text-center' : '']">
+                <div class="space-y-4">
+                    <h1 class="text-4xl md:text-6xl font-display font-black tracking-tight mb-6">{{ headline }}</h1>
+                    <p v-if="subheadline"
+                        class="text-2xl md:text-4xl font-display font-black tracking-tight text-gray-200 mb-8">
+                        {{ subheadline }}
+                    </p>
+                </div>
 
                 <div v-if="buttons" class="flex flex-wrap gap-4" :class="[layout === 'center' ? 'justify-center' : '']">
                     <Button v-for="(btn, index) in buttons" :key="index" :variant="btn.variant as any" as-child>

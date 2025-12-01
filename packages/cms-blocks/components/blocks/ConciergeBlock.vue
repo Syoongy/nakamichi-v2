@@ -18,7 +18,7 @@ defineProps<Props>()
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <!-- CTA Side -->
                 <div class="bg-neutral-800 rounded-xl p-10 flex flex-col justify-center items-start">
-                    <h2 class="text-3xl font-bold mb-6 uppercase">
+                    <h2 class="text-5xl font-black font-display tracking-tight mb-6 uppercase">
                         {{ ctaTitle || 'Your Personal Guide to Home Theater' }}
                     </h2>
                     <p class="text-gray-400 mb-8">Considering a Nakamichi system? Our Concierge helps you find the

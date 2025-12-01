@@ -9,7 +9,7 @@ defineProps<Props>()
     <section class="bg-white text-black py-20">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
             <div class="max-w-xl">
-                <h2 class="text-4xl font-bold mb-4">{{ headline }}</h2>
+                <h2 class="text-4xl font-black font-display tracking-tight mb-4">{{ headline }}</h2>
                 <p v-if="subtext" class="text-gray-600">{{ subtext }}</p>
             </div>
 

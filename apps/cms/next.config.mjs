@@ -5,7 +5,15 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  serverExternalPackages: ['pino', 'pino-pretty', 'thread-stream'],
+  webpack: (webpackConfig) => {
+    webpackConfig.resolve.extensionAlias = {
+      '.cjs': ['.cts', '.cjs'],
+      '.js': ['.ts', '.tsx', '.js', '.jsx'],
+      '.mjs': ['.mts', '.mjs'],
+    }
+
+    return webpackConfig
+  },
   reactCompiler: true,
 }
 

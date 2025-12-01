@@ -12,8 +12,12 @@ defineProps<Props>()
     <section class="bg-black text-white py-20">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-center mb-12">
-                <h2 v-if="title" class="text-3xl font-bold uppercase flex items-center gap-2">
-                    <span class="text-orange-500">▶</span> {{ title }} <span class="text-orange-500">◀</span>
+
+                <h2 v-if="title"
+                    class="text-5xl font-black font-display tracking-tight uppercase flex items-center gap-5">
+                    <span class="text-primary text-2xl">▶</span>
+                    {{ title }}
+                    <span class="text-primary text-2xl">◀</span>
                 </h2>
             </div>
 

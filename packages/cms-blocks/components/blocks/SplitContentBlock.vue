@@ -20,8 +20,11 @@ defineProps<Props>()
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div
                         class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
-                        <h3 class="text-3xl font-bold mb-2">{{ item.headline }}</h3>
-                        <p v-if="item.subheadline" class="text-gray-300 mb-6">{{ item.subheadline }}</p>
+                        <h3 class="text-6xl font-display font-black tracking-tight mb-2">{{ item.headline }}</h3>
+                        <p v-if="item.subheadline"
+                            class="text-gray-300 text-4xl font-display font-black tracking-tight mb-6">
+                            {{ item.subheadline }}
+                        </p>
                         <Button v-if="item.buttonText && item.buttonLink" as-child class="w-fit">
                             <NuxtLink :to="item.buttonLink">{{ item.buttonText }}</NuxtLink>
                         </Button>
