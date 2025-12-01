@@ -1,135 +1,75 @@
-# Turborepo starter
+# Nakamichi v2
 
-This Turborepo starter is maintained by the Turborepo core team.
+A modern, modular web platform built with **Nuxt 4**, **Payload CMS 3.0**, and **TurboRepo**.
 
-## Using this example
+## 🚀 Tech Stack
 
-Run the following command:
+- **Monorepo Manager**: [TurboRepo](https://turbo.build/)
+- **Package Manager**: [Bun](https://bun.sh/)
+- **Frontend**: [Nuxt 4](https://nuxt.com/)
+- **CMS**: [Payload CMS 3.0](https://payloadcms.com/) (Next.js)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Library**: [ShadCN Vue](https://www.shadcn-vue.com/)
 
-```sh
-npx create-turbo@latest
+## 📂 Project Structure
+
+This monorepo is organized into **Apps** and **Packages** (Layers).
+
+### Apps
+
+- **`apps/web`**: The public-facing frontend application. Built with Nuxt 4.
+- **`apps/cms`**: The headless CMS and API. Built with Payload CMS 3.0 (Next.js adapter).
+
+### Packages (Nuxt Layers)
+
+- **`packages/shadcn-layer`**: The foundational design system layer. Contains Tailwind configuration, base UI components (atoms), and global styles.
+- **`packages/cms-blocks`**: A feature layer containing "smart" components that map directly to CMS blocks. This layer consumes `shadcn-layer`.
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) (v1.3.3 or later)
+- Node.js (v24 or later)
+- Docker (optional, for database if not using local SQLite file)
+
+### Installation
+
+Install dependencies from the root directory:
+
+```bash
+bun install
 ```
 
-## What's inside?
+### Development
 
-This Turborepo includes the following packages/apps:
+Start the development environment for all apps:
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+```bash
+bun dev
 ```
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+This will start:
+- **CMS**: [http://localhost:3000](http://localhost:3000) (Admin panel at `/admin`)
+- **Web**: [http://localhost:3001](http://localhost:3001) (Port may vary if 3000 is taken)
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
+### Building
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+To build all applications for production:
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
+```bash
+bun run build
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+## 📦 Architecture Highlights
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
+### Layered Frontend
+The frontend architecture uses **Nuxt Layers** to enforce separation of concerns:
+1.  **`apps/web`**: Consumes layers, handles routing, page layouts, and data fetching.
+2.  **`packages/cms-blocks`**: Defines the visual blocks (Hero, Features, etc.) used by the CMS.
+3.  **`packages/shadcn-layer`**: Provides the raw UI primitives (Buttons, Inputs, Typography).
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+### CMS Integration
+- The CMS provides a flexible "Block" based architecture.
+- The frontend fetches page content including a list of blocks.
+- A `BlockRenderer` component dynamically resolves and renders the correct Vue component for each block type.
