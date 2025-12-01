@@ -20,8 +20,5 @@
     "vue-router": "^4.6.3",
     "cms-blocks": "workspace:*",
     "shadcn-layer": "workspace:*"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@latest"
   }
 }

@@ -6,6 +6,7 @@
     "check": "oxlint",
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:prepare": "turbo run dev:prepare",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
@@ -29,8 +30,5 @@
       "nuxt": "^4.2.1",
       "lucide-vue-next": "^0.555.0"
     }
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@latest"
   }
 }
