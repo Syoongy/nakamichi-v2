@@ -35,7 +35,7 @@ defineProps<Props>()
                     </div>
                 </div>
 
-                <Button class="w-full bg-orange-600 hover:bg-orange-700 text-white">Submit</Button>
+                <Button class="w-full text-white">Submit</Button>
                 <p class="text-xs text-gray-400 mt-4">By submitting, you allow Nakamichi to process your information for
                     marketing purposes.
                 </p>

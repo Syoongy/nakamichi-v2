@@ -11,7 +11,7 @@ defineProps<Props>()
 <template>
     <section class="bg-black text-white py-20">
         <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between mb-12">
+            <div class="flex items-center justify-center mb-12">
                 <h2 v-if="title" class="text-3xl font-bold uppercase flex items-center gap-2">
                     <span class="text-orange-500">▶</span> {{ title }} <span class="text-orange-500">◀</span>
                 </h2>
@@ -19,7 +19,7 @@ defineProps<Props>()
 
             <Tabs default-value="tab-0" class="w-full">
                 <div class="flex justify-center mb-12">
-                    <TabsList class="bg-neutral-900 border border-neutral-800">
+                    <TabsList>
                         <TabsTrigger v-for="(tab, index) in tabs" :key="index" :value="`tab-${index}`"
                             class="uppercase px-8">
                             {{ tab.label }}
@@ -37,16 +37,17 @@ defineProps<Props>()
                             </div>
                             <div class="p-6 text-center">
                                 <h3 class="text-xl font-bold mb-2">{{ product.name }}</h3>
-                                <p v-if="product.price" class="text-gray-400 mb-4">${{ product.price }}</p>
-                                <Button variant="outline"
-                                    class="w-full border-neutral-700 hover:bg-neutral-800 hover:text-white">View
-                                    Product
-                                </Button>
+                                <p v-if="product.price" class="text-gray-200 mb-4">${{ product.price }}</p>
                             </div>
                         </Card>
                     </div>
                 </TabsContent>
             </Tabs>
+            <div class="flex justify-center items-center">
+                <Button variant="ghost" as-child class="mt-12">
+                    <NuxtLink to="/products" class="px-8">View All Products</NuxtLink>
+                </Button>
+            </div>
         </div>
     </section>
 </template>

@@ -21,7 +21,7 @@ defineProps<Props>()
                         <div class="p-1">
                             <Card class="bg-neutral-900 border-neutral-800 text-white h-full">
                                 <div class="p-6 flex flex-col h-full">
-                                    <div class="flex gap-1 text-orange-500 mb-4">
+                                    <div class="flex gap-1 text-star mb-4">
                                         <Star v-for="i in 5" :key="i"
                                             :class="{ 'fill-current': i <= review.rating, 'text-neutral-700': i > review.rating }"
                                             class="w-4 h-4" />
